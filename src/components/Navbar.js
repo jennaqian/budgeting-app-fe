@@ -7,8 +7,8 @@ export default function Navbar() {
         <Link to="/budget">Budget App</Link>
       </h1>
       <h1>
-      <Link to="/budget/new"><button>New Transaction</button></Link>
-      </h1>
+        <Link to="/budget/new"><button>New Transaction</button></Link>
+      </h1> 
     </nav>
   );
 }
