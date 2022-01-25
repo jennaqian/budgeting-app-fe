@@ -10,3 +10,34 @@
 body{
   text-align: center;
 }
+.article {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 50%;
+  margin: 0 auto;
+}
+.ul {
+  background: lightblue;
+  padding: 10px;
+}
+.ul li {
+  background: rgb(246, 250, 251);
+  padding: 15px;
+  margin: 5px;
+  list-style-type: none;
+  font-size: 20px;
+}
+.fancyLi {
+  font-style: italic;
+  font-weight: bolder;
+}
+.buttonsForSingleTransaction {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin: 0 auto;
+  width: 50%;
+}
+.buttonForSingleTransaction{
+  width: 120px;
+  height: 40px;
+}

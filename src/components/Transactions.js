@@ -6,11 +6,11 @@ const API_URL = process.env.REACT_APP_API_URL
 
 function Transactions () {
     const [transactions, setTransactions] = useState([])
-    console.log(API_URL)
+    // console.log(API_URL)
     useEffect(()=> {
         axios.get(API_URL + "/transactions")
         .then((res)=> {
-            console.log(res.data)
+            // console.log(res.data)
             setTransactions(res.data)
         }).catch((err) =>{
             throw err;
@@ -25,8 +25,8 @@ function Transactions () {
                     <thead>
                         <tr>
                             <th>Date:</th>
-                            <th>Details:</th>
                             <th>From:</th>
+                            <th>Type:</th>
                             <th>Amount:</th>
                         </tr>
                     </thead>
