@@ -20,12 +20,12 @@ function Transactions () {
     let accountTotal = transactions.map((elem)=> Number(elem.amount)).reduce((accu, currentVal) => {
         return accu + currentVal}, 0)
     return(
-        <div>
-            <div>
-                <h3>Total: ${accountTotal}</h3>
-            </div>
+        <div className="transactions-background">
+            {/* <div className="totalAmt-container"> */}
+                <h3 className="totalAmt-container">Total: ${accountTotal}</h3>
+            {/* </div> */}
             <section className="transactionsTable">
-                <table>
+                <table className="table">
 
                     <thead>
                         <tr>
