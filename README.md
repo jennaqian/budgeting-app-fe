@@ -1,3 +1,19 @@
+## Backend GitHub Link
+https://github.com/jennaqian/budgeting-app-be
+
+## Frontend GitHub Link
+https://github.com/jennaqian/budgeting-app-fe
+
+## Deployed Backend Link
+https://jq-backend-budget-app.herokuapp.com/
+
+## Deployed Frontend Link
+https://naughty-archimedes-c18c51.netlify.app/budget
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
