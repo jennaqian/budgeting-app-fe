@@ -1,4 +1,4 @@
-import Transactions from "../Components/Transactions";
+import Transactions from "../appComponents/Transactions";
 
 function Index () {
     return (

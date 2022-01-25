@@ -1,4 +1,4 @@
-import TransactionNewForm from "../Components/TransactionNewForm"
+import TransactionNewForm from "../appComponents/TransactionNewForm"
 
 function New (){
     return (

@@ -1,4 +1,4 @@
-import TransactionEditForm from "../Components/TransactionEditForm.js"
+import TransactionEditForm from "../appComponents/TransactionEditForm.js"
 export default function Edit (){
     return(
         <div>

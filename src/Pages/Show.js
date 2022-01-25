@@ -1,4 +1,4 @@
-import TransactionDetails from "../Components/TransactionDetails"
+import TransactionDetails from "../appComponents/TransactionDetails"
 export default function Show (){
     return(
         <div>
