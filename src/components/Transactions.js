@@ -17,9 +17,14 @@ function Transactions () {
         })
     }, [])
 
+    let accountTotal = transactions.map((elem)=> Number(elem.amount)).reduce((accu, currentVal) => {
+        return accu + currentVal}, 0)
     return(
         <div>
-            <section>
+            <div>
+                <h3>Total: ${accountTotal}</h3>
+            </div>
+            <section className="transactionsTable">
                 <table>
 
                     <thead>

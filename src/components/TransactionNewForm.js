@@ -4,7 +4,7 @@ import axios from "axios";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-export default function TransactionEditForm() {
+function TransactionNewForm() {
   let { index } = useParams();
   const [transaction, setTransaction] = useState({
     name: "",
@@ -19,27 +19,14 @@ export default function TransactionEditForm() {
     setTransaction({ ...transaction, [event.target.id]: event.target.value });
   };
 
-  useEffect(() => {
-    axios
-      .get(`${API_URL}/transactions/${index}`)
-      .then((res) => {
-        setTransaction(res.data);
-      })
-      .catch((err) => {
-        throw err;
-      });
-  }, [index]);
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios
-      .put(API_URL + `/transactions/${index}`, transaction)
-      .then((res) => {
-        navigate("/transactions");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    axios.post(API_URL +`/transactions`, transaction)
+    .then((res)=>{
+      navigate("/transactions");
+    }).catch((err)=>{
+      console.log(err);
+    })
   };
 
   return (
@@ -59,7 +46,7 @@ export default function TransactionEditForm() {
         <input
           id="date"
           value={transaction.date}
-          type="text"
+          type="date"
           onChange={handleTextChange}
           placeholder="Date of transaction"
           required
@@ -90,11 +77,8 @@ export default function TransactionEditForm() {
 
         <input type="submit" />
       </form>
-      <br />
-
-      <Link to={`/transactions/${index}`}>
-        <button>Nevermind!</button>
-      </Link>
     </div>
   );
 }
+
+export default TransactionNewForm;
