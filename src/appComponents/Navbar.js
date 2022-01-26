@@ -6,7 +6,7 @@ export default function Navbar() {
       <h1>
         <Link to="/"><img src="https://cdn-icons-png.flaticon.com/512/20/20687.png" alt="Money Logo" className="logoImg"/></Link>
       </h1>
-      <h1>
+      <h1 className="navbarLink">
         <Link to="/transactions">$ ＄ $</Link>
       </h1>
       <h1>

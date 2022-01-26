@@ -25,16 +25,18 @@ function Transactions() {
       return accu + currentVal;
     }, 0);
 
-//   let negOrPos = () => {
-//     if (accountTotal < 0) {
-//         return <h3 className="totalAmt-container">Total: ${accountTotal}</h3>
-//     }
-//   };
+  let negOrPos = () => {
+    if (accountTotal < 0) {
+        return <h3 style={{color: "red", width: "75%", margin: "10px auto"}}>Total: ${accountTotal}</h3>
+    } else if (accountTotal > 1000){
+        return <h3 style={{color: "green", width: "75%", margin: "10px auto"}}>Total: ${accountTotal}</h3>
+    } else {
+      return <h3 style={{color: "white", width: "75%", margin: "10px auto"}}>Total: ${accountTotal}</h3>
+    }
+  };
   return (
     <div className="transactions-background">
-      {/* <div className="totalAmt-container"> */}
-      <h3 className="totalAmt-container">Total: ${accountTotal}</h3>
-      {/* </div> */}
+      {negOrPos()}
       <section className="transactionsTable">
         <table className="table">
           <thead>
